@@ -16,7 +16,7 @@
       var setHelp = function(text) {
         $("#help").html(text);
         console.log(text);
-        $("#help").css("display", "block");
+        $("#help").css("display", "inline-block");
       };
 
       // Event handling
@@ -67,12 +67,12 @@
 
         // Handle help
         $(".toolbar-icon-form").hover(function() {
-            setHelp("[form help]");
+            setHelp("<img src='public/image/form_hover_text.png' style='width: 300px;' />");
         }, function() {
             clearHelp();
         });
         $(".toolbar-icon-workflow").hover(function() {
-            setHelp("<img src='public/image/form_hover_text.png' style='width: 50%; height: 50%;' />");
+            setHelp("[workflow help]");
         }, function() {
             clearHelp();
         });
@@ -87,7 +87,7 @@
 
         var $help = $("#help");
         $(document).on("mousemove", function(e) {
-            if ($help.text().trim()) {
+            if ($help.text().trim() || $help.find("*").length) {
                 $help.css("top", e.pageY + 10);
                 $help.css("left", e.pageX + 10);
             }
