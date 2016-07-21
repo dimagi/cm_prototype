@@ -1,7 +1,7 @@
       var templates = {
         form: "<div class='form'><div class='connection-controls'><h2 class='noselect'>Form</h2><a class='remove'><i class='fa fa-remove'></i></a></div><input class='name form-control form-control-sm' /><hr /><ol></ol><button class='add-question btn btn-primary btn-sm'>Add question</button></div>",
         question: "<li><textarea rows='2' class='form-control form-control-sm question' ></textarea><a class='remove'><i class='fa fa-remove'></i></a></li>",
-        workflow: "<div class='workflow'><div class='connection-controls'><h2 class='noselect'>Workflow</h2><a class='remove'><i class='fa fa-remove'></i></a></div><div class='start'><span class='title'>Start Form</span></div><div class='middle'><span class='title'>Other Forms</span></div></div>",
+        workflow: "<div class='workflow'><div class='connection-controls'><h2 class='noselect'>Workflow</h2><a class='remove'><i class='fa fa-remove'></i></a></div><div class='start'><span class='title'>Start Form</span><a href='#' class='toolbar-icon toolbar-icon-form'></a></div><div class='middle'><span class='title'>Other Forms</span><a href='#' class='toolbar-icon toolbar-icon-form'></a></div></div>",
       };
       var dropForm = function(event, ui) {
         var $form = $(ui.draggable);
@@ -36,11 +36,20 @@
         });
 
         // Add new form
-        $(".toolbar-icon-form").click(function() {
-          var $form = $(templates.form);
+        $(document).on("click", ".toolbar-icon-form", function() {
+          var $form = $(templates.form),
+              $icon = $(this),
+              $start = $icon.closest(".start"),
+              $middle = $icon.closest(".middle");
           $form.find("input").val("Form " + ($(".form").length + 1));
           $form.draggable({ revert: true });
-          $("#workspace").append($form);
+          if ($start.length) {
+            $start.append($form);
+          } else if ($middle.length) {
+            $middle.append($form);
+          } else {
+            $("#workspace").append($form);
+          }
         });
 
         // Add new question to form
