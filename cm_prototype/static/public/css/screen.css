@@ -545,7 +545,73 @@ output, ruby, section, summary, time, mark, audio, video {
                                       box-shadow: 0 0 5px 5px #d5eaca; }
 
                                       @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003637}}
-                                      .form-icon .workflow-icon-connection {
-                                        left: inherit;
-                                        right: 15px;
-                                        margin-top: -8.33333px; }
+                                      .form {
+                                        -moz-border-radius: 10px;
+                                        -webkit-border-radius: 10px;
+                                        border-radius: 10px;
+                                        padding: 10px;
+                                        background-color: #f2f2f1;
+                                        cursor: move;
+                                        min-width: 100px;
+                                        min-height: 175px;
+                                        margin: 20px;
+                                        float: left;
+                                        z-index: 2;
+                                        transition: box-shadow 0.3s ease-in-out;
+                                        box-sizing: border-box; }
+
+                                        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003653}}
+                                        .form .question {
+                                          width: 90%;
+                                          display: inline-block; }
+
+                                          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003658}}
+                                          .form .remove-question {
+                                            width: 10%;
+                                            text-align: center;
+                                            display: inline-block;
+                                            cursor: pointer; }
+
+                                            @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003665}}
+                                            .form .remove-question:hover {
+                                              color: #002c5f; }
+
+                                              @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003669}}
+                                              .form li {
+                                                margin: 10px 0; }
+
+                                                @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003673}}
+                                                .form:hover, .form.glow {
+                                                  -moz-box-shadow: 0 0 5px 5px #bcdeff;
+                                                  -webkit-box-shadow: 0 0 5px 5px #bcdeff;
+                                                  box-shadow: 0 0 5px 5px #bcdeff; }
+
+                                                  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003679}}
+                                                  .form h1 {
+                                                    font-size: 10px;
+                                                    text-transform: uppercase;
+                                                    font-weight: bold;
+                                                    color: #685c53; }
+
+                                                    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003687}}
+                                                    .connection-controls {
+                                                      padding-bottom: 10px;
+                                                      cursor: pointer;
+                                                      position: relative; }
+
+                                                      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003693}}
+                                                      .connection-controls .workflow-icon-connection {
+                                                        left: inherit;
+                                                        right: -15px;
+                                                        top: -15px;
+                                                        margin-top: 0;
+                                                        margin-left: 0; }
+
+                                                        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003702}}
+                                                        .noselect {
+                                                          -webkit-touch-callout: none;
+                                                          -webkit-user-select: none;
+                                                          -khtml-user-select: none;
+                                                          -moz-user-select: none;
+                                                          -ms-user-select: none;
+                                                          user-select: none; }
