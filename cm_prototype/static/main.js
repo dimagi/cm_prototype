@@ -1,7 +1,7 @@
       var templates = {
-        form: "<div class='form'><input class='name' /><ol></ol><button class='add-question'>Add question</button></div>",
-        question: "<li><input /><a class='remove-question' href='javascript:void(0)'>x</a></li>",
-        workflow: "<div class='workflow'><div class='start'><span class='title'>Start Form</span></div><div class='middle'><span class='title'>Other Forms</span></div></div>",
+        form: "<div class='form'><input class='name' /><a class='remove'>x</a><ol></ol><button class='add-question'>Add question</button></div>",
+        question: "<li><input /><a class='remove'>x</a></li>",
+        workflow: "<div class='workflow'><a class='remove'>x</a><div class='start'><span class='title'>Start Form</span></div><div class='middle'><span class='title'>Other Forms</span></div></div>",
       };
       var dropForm = function(event, ui) {
         var $form = $(ui.draggable);
@@ -57,8 +57,18 @@
         $(document).on("click", ".add-question", function() {
           $(this).closest(".form").find("ol").append($(templates.question));
         });
-        $(document).on("click", ".remove-question", function() {
+        $(document).on("click", ".form ol li .remove", function() {
           $(this).closest("li").remove();
+        });
+        $(document).on("click", ".form > .remove", function() {
+            if (confirm("Delete form?")) {
+                $(this).closest(".form").remove();
+            }
+        });
+        $(document).on("click", ".workflow > .remove", function() {
+          if (confirm("Delete workflow?")) {
+            $(this).closest(".workflow").remove();
+          }
         });
         var $help = $("#help");
         $(document).on("mousemove", function(e) {
