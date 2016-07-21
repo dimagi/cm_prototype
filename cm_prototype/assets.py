@@ -5,6 +5,7 @@ common_css = Bundle(
     'components/font-awesome/css/font-awesome.min.css',
     'components/tether/dist/css/tether.min.css',
     'components/bootstrap/dist/css/bootstrap.min.css',
+    'public/css/otherstyle.css',
     Bundle(
         'sass/style.scss',
         filters=('cssmin', 'pyscss', 'compass'),

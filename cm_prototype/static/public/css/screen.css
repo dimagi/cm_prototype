@@ -421,8 +421,8 @@ output, ruby, section, summary, time, mark, audio, video {
 
         @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003503}}
         .toolbar-icon-form {
-          background-image: url("/static/image/new_form_full.png"); }
+          background-image: url("../image/new_form_full.png"); }
 
           @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003508}}
           .toolbar-icon-workflow {
-            background-image: url("/static/image/new_case_full.png"); }
+            background-image: url("../image/new_case_full.png"); }
