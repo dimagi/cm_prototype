@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="True">
+
+    <!-- todo icon -->
+    <!-- <link rel="icon"
+          type="image/png"
+          href="/static/img/favicon32.png" /> -->
+
+    {% block meta_basic %}
+      <meta name="description"          content="{{ site_description }}">
+      <meta name="author"               content="Biyeun Buczyk">
+    {% endblock %}
+
+    {% assets "common_css" %}
+      <link rel="stylesheet" type="text/css" media="screen, projection" href="{{ ASSET_URL }}" />
+    {% endassets %}
+
+    {% block stylesheets %}{% endblock %}
+  </head>
+
+  <body>
+    {% block navigation %}
+    <div class="main-navbar">
+      App Builder
+    </div>
+    <div class="toolbar">
+      <a href="#" class="toolbar-icon toolbar-icon-form"></a>
+    </div>
+    {% endblock %}
+    {% block content %}{% endblock %}
+    <!-- JS -->
+    {% assets "common_js" %}
+      <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+    {% block js %}{% endblock %}
+  </body>
+</html>

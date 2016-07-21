@@ -1,0 +1,99 @@
+// Screen
+// ======
+
+@import "_base";
+@import "compass/css3/background-size";
+
+$susy: (
+  flow: ltr,
+  math: fluid,
+  output: isolate,
+  container: auto,
+  columns: 12,
+  gutters: .3,
+  gutter-position: inside,
+);
+
+body {
+  font-family: "Hevetica Neue", "Helvetica", sans-serif;
+}
+
+@media(min-width: 480px) {
+  @for $i from 1 through 12{
+    .col-sm-#{$i} {
+      @include span($i of 12);
+    }
+  }
+}
+
+@media(min-width: 700px) {
+  @for $i from 1 through 12{
+    .col-md-#{$i} {
+      @include span($i of 12);
+    }
+  }
+}
+
+@media(min-width: 940px) {
+  @for $i from 1 through 12{
+    .col-lg-#{$i} {
+      @include span($i of 12);
+    }
+  }
+}
+
+$color-bg: #f2f2f1;
+
+$color-neutral-light: #d6d6d4;
+$color-neutral-mid: #685c53;
+$color-neutral-dark: #373534;
+
+$color-brand-light: #bcdeff;
+$color-brand-mid: #004ebc;
+$color-brand-dark: #002c5f;
+
+$color-cool-light: #ccf3f4;
+$color-cool-mid: #00bdc5;
+$color-cool-dark: #00799a;
+
+$color-warm-light: #f8ecbd;
+$color-warm-mid: #f9c700;
+$color-warm-dark: #685300;
+
+$navbar-height: 50px;
+
+.main-navbar {
+  width: 100%;
+  background-color: $color-bg;
+  height: $navbar-height;
+  line-height: $navbar-height;
+}
+
+$toolbar-height: 90px;
+
+.toolbar {
+  width: 100%;
+  height: $toolbar-height;
+  background-color: $color-neutral-dark;
+}
+
+$bg-size: 100%;
+
+.toolbar-icon {
+  width: 90px;
+  height: 90px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: inline-block;
+  
+  @include background-size($default-background-size);
+
+  &:hover {
+    background-position: center -90px;
+  }
+}
+
+.toolbar-icon-form {
+  background-image: url('/static/image/new_form_full.png');
+}
+

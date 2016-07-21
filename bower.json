@@ -1,0 +1,11 @@
+{
+  "name": "cm.prototype2",
+  "version": "1.0",
+  "private": true,
+  "dependencies": {
+    "jquery": "2.2.4",
+    "font-awesome": "4.6.2",
+    "knockout": "3.4.0",
+    "underscore": "1.8.3"
+  }
+}

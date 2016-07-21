@@ -1,0 +1,4 @@
+DEV_DATABASE = 'postgresql://user:password@localhost/dbname'
+PROD_DATABASE = 'postgresql://user:password@localhost/dbname'
+
+SECRET_KEY = ''
