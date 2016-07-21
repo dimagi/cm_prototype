@@ -63,12 +63,12 @@
         $(document).on("click", ".form ol li .remove", function() {
           $(this).closest("li").remove();
         });
-        $(document).on("click", ".form > .remove", function() {
+        $(document).on("click", ".form > .connection-controls > .remove", function() {
             if (confirm("Delete form?")) {
                 $(this).closest(".form").remove();
             }
         });
-        $(document).on("click", ".workflow > .remove", function() {
+        $(document).on("click", ".workflow > .connection-controls .remove", function() {
           if (confirm("Delete workflow?")) {
             $(this).closest(".workflow").remove();
           }
