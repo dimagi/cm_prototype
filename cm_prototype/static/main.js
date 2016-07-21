@@ -1,7 +1,7 @@
       var templates = {
-        form: "<div class='form'><input class='name' /><a class='remove'>x</a><ol></ol><button class='add-question'>Add question</button></div>",
-        question: "<li><input /><a class='remove'>x</a></li>",
-        workflow: "<div class='workflow'><a class='remove'>x</a><div class='start'><span class='title'>Start Form</span></div><div class='middle'><span class='title'>Other Forms</span></div></div>",
+        form: "<div class='form'><div class='connection-controls'><h2 class='noselect'>Form</h2><a class='remove'><i class='fa fa-remove'></i></a></div><input class='name form-control form-control-sm' /><hr /><ol></ol><button class='add-question btn btn-primary btn-sm'>Add question</button></div>",
+        question: "<li><textarea rows='2' class='form-control form-control-sm question' ></textarea><a class='remove'><i class='fa fa-remove'></i></a></li>",
+        workflow: "<div class='workflow'><div class='connection-controls'><h2 class='noselect'>Workflow</h2><a class='remove'><i class='fa fa-remove'></i></a></div><div class='start'><span class='title'>Start Form</span></div><div class='middle'><span class='title'>Other Forms</span></div></div>",
       };
       var dropForm = function(event, ui) {
         var $form = $(ui.draggable);

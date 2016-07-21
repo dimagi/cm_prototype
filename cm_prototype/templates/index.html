@@ -1,32 +1,55 @@
 {% extends '_base.html' %}
 
 {% block content %}
+<div class="workflow">
+<div class="connection-controls">
+  <h2 class="noselect">Workflow</h2>
+  <a class="remove"><i class="fa fa-remove"></i></a>
+</div>
 
-
-  <div class="workflow-container">
-    <div class="workflow-icon">
-      <i class="fa fa-bars"></i>
+  <div class="start ui-droppable">
+    <span class="title">Start Form</span>
+    <div class="form ui-draggable ui-draggable-handle" style="position: relative; left: 0px; top: 0px;">
+      <div class="connection-controls">
+        <h2 class="noselect">Form</h2>
+        <a class="remove"><i class="fa fa-remove"></i></a>
+      </div>
+      <input class="name form-control form-control-sm">
+      <hr>
+      <ol></ol>
+      <button class="add-question btn btn-primary btn-sm">Add question</button>
     </div>
-    <div class="workflow-icon-connection"></div>
   </div>
 
-  <div class="workflow-container">
-    <div class="workflow-icon">
-      <i class="fa fa-bars"></i>
-    </div>
-    <div class="workflow-icon-connection connected"></div>
+  <div class="middle ui-droppable">
+    <span class="title">Other Forms</span>
+
   </div>
 
-  <div class="form">
-    <div class="connection-controls">
-      <h1 class="noselect">Form</h1>
-      <div class="workflow-icon-connection"></div>
-    </div>
-    <input class="name form-control form-control-sm">
-    <hr />
-    <ol>
-      <li><input class="form-control form-control-sm question"><a class="remove-question"><i class="fa fa-remove"></i></a></li>
-    </ol>
-    <button class="add-question btn btn-primary btn-sm">Add question</button>
-  </div>
+{#  <div class="workflow-container">#}
+{#    <div class="workflow-icon">#}
+{#      <i class="fa fa-bars"></i>#}
+{#    </div>#}
+{#    <div class="workflow-icon-connection"></div>#}
+{#  </div>#}
+{##}
+{#  <div class="workflow-container">#}
+{#    <div class="workflow-icon">#}
+{#      <i class="fa fa-bars"></i>#}
+{#    </div>#}
+{#    <div class="workflow-icon-connection connected"></div>#}
+{#  </div>#}
+{##}
+{#  <div class="form">#}
+{#    <div class="connection-controls">#}
+{#      <h2 class="noselect">Form</h2>#}
+{#      <div class="workflow-icon-connection"></div>#}
+{#    </div>#}
+{#    <input class="name form-control form-control-sm">#}
+{#    <hr />#}
+{#    <ol>#}
+{#      <li><input class="form-control form-control-sm question"><a class="remove-question"><i class="fa fa-remove"></i></a></li>#}
+{#    </ol>#}
+{#    <button class="add-question btn btn-primary btn-sm">Add question</button>#}
+{#  </div>#}
 {% endblock %}
