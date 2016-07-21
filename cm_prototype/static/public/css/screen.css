@@ -554,7 +554,7 @@ output, ruby, section, summary, time, mark, audio, video {
                                         cursor: move;
                                         min-width: 100px;
                                         min-height: 175px;
-                                        margin: 20px;
+                                        margin: 10px;
                                         float: left;
                                         z-index: 2;
                                         transition: box-shadow 0.3s ease-in-out;
@@ -566,52 +566,119 @@ output, ruby, section, summary, time, mark, audio, video {
                                           display: inline-block; }
 
                                           @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003658}}
-                                          .form .remove-question {
+                                          .form .remove {
                                             width: 10%;
                                             text-align: center;
                                             display: inline-block;
-                                            cursor: pointer; }
+                                            cursor: pointer;
+                                            color: #004ebc; }
 
-                                            @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003665}}
-                                            .form .remove-question:hover {
+                                            @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003666}}
+                                            .form .remove:hover {
                                               color: #002c5f; }
 
-                                              @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003669}}
+                                              @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003670}}
                                               .form li {
                                                 margin: 10px 0; }
 
-                                                @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003673}}
-                                                .form:hover, .form.glow {
-                                                  -moz-box-shadow: 0 0 5px 5px #bcdeff;
-                                                  -webkit-box-shadow: 0 0 5px 5px #bcdeff;
-                                                  box-shadow: 0 0 5px 5px #bcdeff; }
+                                                @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003674}}
+                                                .form li .remove {
+                                                  vertical-align: top; }
 
-                                                  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003679}}
-                                                  .form h1 {
-                                                    font-size: 10px;
-                                                    text-transform: uppercase;
-                                                    font-weight: bold;
-                                                    color: #685c53; }
+                                                  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003678}}
+                                                  .form:hover, .form.glow {
+                                                    -moz-box-shadow: 0 0 5px 5px #bcdeff;
+                                                    -webkit-box-shadow: 0 0 5px 5px #bcdeff;
+                                                    box-shadow: 0 0 5px 5px #bcdeff; }
 
-                                                    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003687}}
-                                                    .connection-controls {
-                                                      padding-bottom: 10px;
-                                                      cursor: pointer;
-                                                      position: relative; }
+                                                    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003684}}
+                                                    .form h2 {
+                                                      color: #685c53; }
 
-                                                      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003693}}
-                                                      .connection-controls .workflow-icon-connection {
-                                                        left: inherit;
-                                                        right: -15px;
-                                                        top: -15px;
-                                                        margin-top: 0;
-                                                        margin-left: 0; }
+                                                      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003689}}
+                                                      .connection-controls {
+                                                        padding-bottom: 10px;
+                                                        cursor: pointer;
+                                                        position: relative;
+                                                        width: 100%; }
 
-                                                        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003702}}
-                                                        .noselect {
-                                                          -webkit-touch-callout: none;
-                                                          -webkit-user-select: none;
-                                                          -khtml-user-select: none;
-                                                          -moz-user-select: none;
-                                                          -ms-user-select: none;
-                                                          user-select: none; }
+                                                        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003696}}
+                                                        .connection-controls h2 {
+                                                          font-size: 10px;
+                                                          text-transform: uppercase;
+                                                          font-weight: bold;
+                                                          color: #685c53; }
+
+                                                          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003703}}
+                                                          .connection-controls .remove {
+                                                            position: absolute;
+                                                            right: -2px;
+                                                            top: -4px; }
+
+                                                            @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003710}}
+                                                            .noselect {
+                                                              -webkit-touch-callout: none;
+                                                              -webkit-user-select: none;
+                                                              -khtml-user-select: none;
+                                                              -moz-user-select: none;
+                                                              -ms-user-select: none;
+                                                              user-select: none; }
+
+                                                              @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003726}}
+                                                              .workflow {
+                                                                min-width: 200px;
+                                                                min-height: 200px;
+                                                                -moz-border-radius: 10px;
+                                                                -webkit-border-radius: 10px;
+                                                                border-radius: 10px;
+                                                                background-color: #004ebc;
+                                                                padding: 15px;
+                                                                margin: 20px;
+                                                                float: left; }
+
+                                                                @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003738}}
+                                                                .workflow > .connection-controls h2 {
+                                                                  color: #ffffff; }
+
+                                                                  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003742}}
+                                                                  .workflow > .connection-controls .remove {
+                                                                    color: #bcdeff; }
+
+                                                                    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003746}}
+                                                                    .workflow > .connection-controls .remove:hover {
+                                                                      color: white; }
+
+                                                                      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003752}}
+                                                                      .workflow .start, .workflow .middle {
+                                                                        position: relative;
+                                                                        min-height: 220px;
+                                                                        margin: 10px;
+                                                                        float: left;
+                                                                        padding: 10px;
+                                                                        padding-top: 15px;
+                                                                        -moz-border-radius: 5px;
+                                                                        -webkit-border-radius: 5px;
+                                                                        border-radius: 5px; }
+
+                                                                        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003765}}
+                                                                        .workflow .start {
+                                                                          background-color: #002c5f;
+                                                                          min-width: 200px;
+                                                                          margin-bottom: 30px; }
+
+                                                                          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003772}}
+                                                                          .workflow .middle {
+                                                                            background-color: #002c5f;
+                                                                            min-width: 400px; }
+
+                                                                            @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003778}}
+                                                                            .workflow .title {
+                                                                              position: absolute;
+                                                                              text-transform: uppercase;
+                                                                              color: #ffffff;
+                                                                              font-weight: bold;
+                                                                              font-size: 10px;
+                                                                              top: 5px;
+                                                                              left: 0;
+                                                                              text-align: center;
+                                                                              width: 100%; }

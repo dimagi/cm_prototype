@@ -230,7 +230,7 @@ $connection-size: $workflow-icon-size/3;
   cursor: move;
   min-width: 100px;
   min-height: 175px;
-  margin: 20px;
+  margin: 10px;
   float: left;
   z-index: 2;
 
@@ -238,17 +238,22 @@ $connection-size: $workflow-icon-size/3;
     width: 90%;
     display: inline-block;
   }
-  .remove-question {
+  .remove {
     width: 10%;
     text-align: center;
     display: inline-block;
     cursor: pointer;
+    color: $color-brand-mid;
+
     &:hover {
       color: $color-brand-dark;
     }
   }
   li {
     margin: 10px 0;
+    .remove {
+      vertical-align: top;
+    }
   }
   transition: box-shadow .3s ease-in-out;
   box-sizing: border-box;
@@ -256,27 +261,31 @@ $connection-size: $workflow-icon-size/3;
   &.glow {
     @include single-box-shadow(0, 0, 5px, 5px, $color-brand-light, null);
   }
-  h1 {
-    font-size: 10px;
-    text-transform: uppercase;
-    font-weight: bold;
+
+  h2 {
     color: $color-neutral-mid;
   }
+
 }
 
 .connection-controls {
   padding-bottom: 10px;
   cursor: pointer;
   position: relative;
-
-  .workflow-icon-connection {
-    left: inherit;
-    right: -15px;
-    top: -15px;
-    margin-top: 0;
-    margin-left: 0;
-
+  width: 100%;
+  h2 {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $color-neutral-mid;
   }
+
+  .remove {
+    position: absolute;
+    right: -2px;
+    top: -4px;
+  }
+
 }
 
 .noselect {
@@ -288,4 +297,57 @@ $connection-size: $workflow-icon-size/3;
   user-select: none;           /* Non-prefixed version, currently
                                   not supported by any browser */
 }
+
+.workflow {
+  min-width: 200px;
+  min-height: 200px;
+  @include border-radius(10px);
+  background-color: $color-brand-mid;
+  padding: 15px;
+  margin: 20px;
+  float: left;
+  > .connection-controls {
+    h2 {
+      color: #ffffff;
+    }
+    .remove {
+      color: $color-brand-light;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+.workflow .start,
+.workflow .middle {
+  position: relative;
+  min-height: 220px;
+  margin: 10px;
+  float: left;
+  padding: 10px;
+  padding-top: 15px;
+  @include border-radius(5px);
+}
+.workflow .start {
+  background-color: $color-brand-dark;
+  min-width: 200px;
+  margin-bottom: 30px;
+}
+.workflow .middle {
+  background-color: $color-brand-dark;
+  min-width: 400px;
+}
+.workflow .title {
+  position: absolute;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 10px;
+  top: 5px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+}
+
+
 
