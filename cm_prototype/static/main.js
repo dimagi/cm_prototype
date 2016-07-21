@@ -10,11 +10,12 @@
         $(this).append($form);
       };
       var clearHelp = function() {
-        $("#help").text("");
+        $("#help").html("");
         $("#help").css("display", "none");
       };
       var setHelp = function(text) {
-        $("#help").text(text);
+        $("#help").html(text);
+        console.log(text);
         $("#help").css("display", "block");
       };
 
@@ -44,7 +45,9 @@
 
         // Add new question to form
         $(document).on("click", ".add-question", function() {
-          $(this).closest(".form").find("ol").append($(templates.question));
+          var $list = $(this).closest(".form").find("ol");
+          $list.append($(templates.question));
+          $list.find("input:last").focus();
         });
 
         // Remove questions, forms, workflows
@@ -69,7 +72,7 @@
             clearHelp();
         });
         $(".toolbar-icon-workflow").hover(function() {
-            setHelp("[workflow help]");
+            setHelp("<img src='public/image/form_hover_text.png' style='width: 50%; height: 50%;' />");
         }, function() {
             clearHelp();
         });
