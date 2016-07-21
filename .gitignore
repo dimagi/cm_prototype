@@ -59,7 +59,6 @@ coverage.xml
 */localsettings.py
 */static/.sass-cache/*
 */static/.webassets-cache/*
-*/static/public/css/*
 
 
 # emacs
