@@ -72,7 +72,7 @@
             clearHelp();
         });
         $(".toolbar-icon-workflow").hover(function() {
-            setHelp("[workflow help]");
+            setHelp("<img src='public/image/workflow_hover_img.png' style='width: 600px;' />");
         }, function() {
             clearHelp();
         });
