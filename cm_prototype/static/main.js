@@ -1,7 +1,7 @@
       var templates = {
-        form: "<div class='form'><input class='name' /><ol></ol><button class='add-question'>Add question</button></div>",
-        question: "<li><input /><a class='remove-question' href='javascript:void(0)'>x</a></li>",
-        workflow: "<div class='workflow'><div class='start'><span class='title'>Start Form</span></div><div class='middle'><span class='title'>Other Forms</span></div></div>",
+        form: "<div class='form'><input class='name' /><a class='remove'>x</a><ol></ol><button class='add-question'>Add question</button></div>",
+        question: "<li><input /><a class='remove'>x</a></li>",
+        workflow: "<div class='workflow'><a class='remove'>x</a><div class='start'><span class='title'>Start Form</span></div><div class='middle'><span class='title'>Other Forms</span></div></div>",
       };
       var dropForm = function(event, ui) {
         var $form = $(ui.draggable);
@@ -17,13 +17,52 @@
         $("#help").text(text);
         $("#help").css("display", "block");
       };
+
+      // Event handling
       $(document).ready(function() {
+        // Add new workflow
+        $(".toolbar-icon-workflow").click(function() {
+          var $workflow = $(templates.workflow);
+          $workflow.find(".middle").droppable({
+            accept: ".form",
+            drop: dropForm,
+          });
+          $workflow.find(".start").droppable({
+            accept: ".form",
+            drop: dropForm,
+          });
+          $("#workspace").append($workflow);
+        });
+
+        // Add new form
         $(".toolbar-icon-form").click(function() {
           var $form = $(templates.form);
           $form.find("input").val("Form " + ($(".form").length + 1));
           $form.draggable({ revert: true });
           $("#workspace").append($form);
         });
+
+        // Add new question to form
+        $(document).on("click", ".add-question", function() {
+          $(this).closest(".form").find("ol").append($(templates.question));
+        });
+
+        // Remove questions, forms, workflows
+        $(document).on("click", ".form ol li .remove", function() {
+          $(this).closest("li").remove();
+        });
+        $(document).on("click", ".form > .remove", function() {
+            if (confirm("Delete form?")) {
+                $(this).closest(".form").remove();
+            }
+        });
+        $(document).on("click", ".workflow > .remove", function() {
+          if (confirm("Delete workflow?")) {
+            $(this).closest(".workflow").remove();
+          }
+        });
+
+        // Handle help
         $(".toolbar-icon-form").hover(function() {
             setHelp("[form help]");
         }, function() {
@@ -42,24 +81,7 @@
         $(document).on('mouseout', '.workflow .start', function() {
             clearHelp();
         });
-        $(".toolbar-icon-workflow").click(function() {
-          var $workflow = $(templates.workflow);
-          $workflow.find(".middle").droppable({
-            accept: ".form",
-            drop: dropForm,
-          });
-          $workflow.find(".start").droppable({
-            accept: ".form",
-            drop: dropForm,
-          });
-          $("#workspace").append($workflow);
-        });
-        $(document).on("click", ".add-question", function() {
-          $(this).closest(".form").find("ol").append($(templates.question));
-        });
-        $(document).on("click", ".remove-question", function() {
-          $(this).closest("li").remove();
-        });
+
         var $help = $("#help");
         $(document).on("mousemove", function(e) {
             if ($help.text().trim()) {
