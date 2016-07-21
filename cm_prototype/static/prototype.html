@@ -29,6 +29,49 @@
     
       <link rel="stylesheet" type="text/css" media="screen, projection" href="public/css/screen.css?d579b6fd" />
     
+    <style>
+      .ui-droppable-active {
+        background-color: #ddd !important;
+      }
+      .ui-droppable-hover {
+        background-color: #ffc !important;
+      }
+      .form {
+        background-color: white;
+        min-width: 100px;
+        min-height: 175px;
+        border: 1px solid grey;
+        padding: 10px;
+        margin: 20px;
+        float: left;
+        cursor: move;
+      }
+      .form input {
+        width: 75px;
+      }
+      .workflow {
+        min-width: 200px;
+        min-height: 200px;
+        background-color: #ccc;
+        padding: 10px;
+        margin: 20px;
+        float: left;
+      }
+      .workflow .start, .workflow .middle {
+        min-height: 100px;
+        border: 5px solid blue;
+        margin: 10px;
+      }
+      .workflow .start {
+        float: left;
+        min-width: 100px;
+      }
+      .workflow .middle {
+        clear: left;
+        float: left;
+        min-width: 300px;
+      }
+    </style>
 
     
   </head>
@@ -44,7 +87,7 @@
     </div>
     
     
-Hello World!
+    <div id="workspace"></div>
 
     <!-- JS -->
     
@@ -57,6 +100,10 @@ Hello World!
       <script type="text/javascript" src="components/tether/dist/js/tether.min.js"></script>
     
       <script type="text/javascript" src="components/bootstrap/dist/js/bootstrap.js"></script>
+
+      <script   src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="   crossorigin="anonymous"></script>
+
+      <script type="text/javascript" src="main.js"></script>
     
     
   </body>
