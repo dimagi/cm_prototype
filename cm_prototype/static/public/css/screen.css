@@ -395,34 +395,157 @@ output, ruby, section, summary, time, mark, audio, video {
   width: 100%;
   background-color: #f2f2f1;
   height: 50px;
-  line-height: 50px; }
+  line-height: 50px;
+  font-weight: 800;
+  padding: 0 23px; }
 
-  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003479}}
+  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003481}}
   .toolbar {
     width: 100%;
     height: 90px;
     background-color: #373534; }
 
-    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003486}}
+    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003488}}
     .toolbar-icon {
       width: 90px;
       height: 90px;
       background-position: center top;
       background-repeat: no-repeat;
       display: inline-block;
+      cursor: pointer;
       -moz-background-size: 100% auto;
       -o-background-size: 100% auto;
       -webkit-background-size: 100% auto;
       background-size: 100% auto; }
 
-      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003498}}
+      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003501}}
       .toolbar-icon:hover {
         background-position: center -90px; }
 
-        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003503}}
+        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003506}}
         .toolbar-icon-form {
           background-image: url("../image/new_form_full.png"); }
 
-          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003508}}
+          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003511}}
           .toolbar-icon-workflow {
             background-image: url("../image/new_case_full.png"); }
+
+            @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003516}}
+            .form-icon {
+              width: 125px;
+              height: 125px;
+              cursor: pointer;
+              background-position: center top;
+              background-repeat: no-repeat;
+              display: inline-block;
+              -moz-background-size: 100% auto;
+              -o-background-size: 100% auto;
+              -webkit-background-size: 100% auto;
+              background-size: 100% auto;
+              background-image: url("../image/form_icon_full.png");
+              position: relative; }
+
+              @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003531}}
+              .form-icon:hover {
+                background-position: center -125px; }
+
+                @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003536}}
+                .form-icon-title {
+                  position: absolute;
+                  width: 60px;
+                  bottom: 26px;
+                  font-size: 12px;
+                  left: 31px;
+                  font-weight: 800;
+                  text-transform: uppercase;
+                  color: #00799a; }
+
+                  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003548}}
+                  .form-connection {
+                    position: absolute;
+                    right: 15px; }
+
+                    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003554}}
+                    .form-icon-workflow {
+                      background-image: url("../image/form_icon_workflow_full.png"); }
+
+                      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003558}}
+                      .form-icon-workflow .form-icon-title {
+                        color: #004ebc; }
+
+                        @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003563}}
+                        .workflow-container {
+                          width: 500px;
+                          height: 500px;
+                          background: #658abd;
+                          -webkit-border-radius: 50%;
+                          -moz-border-radius: 50%;
+                          border-radius: 50%;
+                          position: relative; }
+
+                          @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003574}}
+                          .workflow-icon {
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            margin-left: -25px;
+                            margin-top: -25px;
+                            width: 50px;
+                            height: 50px;
+                            text-align: center;
+                            line-height: 50px;
+                            background: #004ebc;
+                            -webkit-border-radius: 50%;
+                            -moz-border-radius: 50%;
+                            border-radius: 50%;
+                            color: #ffffff;
+                            font-size: 1.5rem;
+                            cursor: pointer;
+                            transition: box-shadow 0.3s ease-in-out; }
+
+                            @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003594}}
+                            .workflow-icon:hover, .workflow-icon.glow {
+                              -moz-box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.5);
+                              -webkit-box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.5);
+                              box-shadow: 0 0 5px 5px rgba(255, 255, 255, 0.5); }
+
+                              @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003601}}
+                              .workflow-icon-connection {
+                                cursor: pointer;
+                                width: 16.66667px;
+                                height: 16.66667px;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                margin-left: -8.33333px;
+                                margin-top: -33.33333px;
+                                border: 3px solid #f9c700;
+                                background: #f8ecbd;
+                                -webkit-border-radius: 50%;
+                                -moz-border-radius: 50%;
+                                border-radius: 50%;
+                                transition: box-shadow 0.3s ease-in-out;
+                                box-sizing: border-box; }
+
+                                @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003619}}
+                                .workflow-icon-connection:hover, .workflow-icon-connection.glow {
+                                  -moz-box-shadow: 0 0 5px 5px #f8ecbd;
+                                  -webkit-box-shadow: 0 0 5px 5px #f8ecbd;
+                                  box-shadow: 0 0 5px 5px #f8ecbd; }
+
+                                  @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003625}}
+                                  .workflow-icon-connection.connected {
+                                    border: 1px solid #ffffff;
+                                    background-color: #47b700; }
+
+                                    @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003630}}
+                                    .workflow-icon-connection.connected:hover, .workflow-icon-connection.connected.glow {
+                                      -moz-box-shadow: 0 0 5px 5px #d5eaca;
+                                      -webkit-box-shadow: 0 0 5px 5px #d5eaca;
+                                      box-shadow: 0 0 5px 5px #d5eaca; }
+
+                                      @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/biyeun\/Code\/_web\/cm_prototype\/src\/cm_prototype\/static\/sass\/style\.scss}line{font-family:\00003637}}
+                                      .form-icon .workflow-icon-connection {
+                                        left: inherit;
+                                        right: 15px;
+                                        margin-top: -8.33333px; }

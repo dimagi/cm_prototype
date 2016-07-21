@@ -3,6 +3,15 @@
 
 @import "_base";
 @import "compass/css3/background-size";
+@import "compass/css3/box-shadow";
+@import "compass/css3/animation";
+
+@mixin circle($width, $color) {
+  background: $color;
+  -webkit-border-radius: $width/2;
+     -moz-border-radius: $width/2;
+          border-radius: $width/2;
+}
 
 $susy: (
   flow: ltr,
@@ -60,6 +69,10 @@ $color-warm-light: #f8ecbd;
 $color-warm-mid: #f9c700;
 $color-warm-dark: #685300;
 
+$color-pos-light: #d5eaca;
+$color-pos-mid: #47b700;
+$color-pos-dark: #216f00;
+
 $navbar-height: 50px;
 
 .main-navbar {
@@ -67,6 +80,8 @@ $navbar-height: 50px;
   background-color: $color-bg;
   height: $navbar-height;
   line-height: $navbar-height;
+  font-weight: 800;
+  padding: 0 23px;
 }
 
 $toolbar-height: 90px;
@@ -85,7 +100,8 @@ $bg-size: 100%;
   background-position: center top;
   background-repeat: no-repeat;
   display: inline-block;
-  
+  cursor: pointer;
+
   @include background-size($default-background-size);
 
   &:hover {
@@ -101,3 +117,116 @@ $bg-size: 100%;
   background-image: url('../image/new_case_full.png');
 }
 
+.form-icon {
+  width: 125px;
+  height: 125px;
+  cursor: pointer;
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: inline-block;
+
+  @include background-size($default-background-size);
+  background-image: url('../image/form_icon_full.png');
+  position: relative;
+
+  &:hover {
+    background-position: center -125px;
+  }
+
+}
+
+
+
+.form-icon-title {
+  position: absolute;
+  width: 60px;
+  bottom: 26px;
+  font-size: 12px;
+  left: 31px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: $color-cool-dark;
+}
+
+.form-connection {
+  position: absolute;
+  right: 15px;
+
+}
+
+
+.form-icon-workflow {
+  background-image: url('../image/form_icon_workflow_full.png');
+  .form-icon-title {
+    color: $color-brand-mid;
+  }
+}
+
+
+.workflow-container {
+  width: 500px;
+  height: 500px;
+  @include circle(100%, lighten(desaturate($color-brand-mid, 60), 20));
+  position: relative;
+}
+
+$workflow-icon-size: 50px;
+
+.workflow-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -$workflow-icon-size/2;
+  margin-top: -$workflow-icon-size/2;
+  width: $workflow-icon-size;
+  height: $workflow-icon-size;
+  text-align: center;
+  line-height: $workflow-icon-size;
+  @include circle(100%, $color-brand-mid);
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: box-shadow .3s ease-in-out;
+  &:hover,
+  &.glow {
+    @include single-box-shadow(0, 0, 5px, 5px, rgba(255, 255, 255, .5), null);
+  }
+}
+
+$connection-size: $workflow-icon-size/3;
+.workflow-icon-connection {
+  cursor: pointer;
+  width: $connection-size;
+  height: $connection-size;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -$connection-size/2;
+  margin-top: -$connection-size/2 - $workflow-icon-size/2;
+  border: 3px solid $color-warm-mid;
+  @include circle(100%, $color-warm-light);
+  transition: box-shadow .3s ease-in-out;
+  box-sizing: border-box;
+  &:hover,
+  &.glow {
+    @include single-box-shadow(0, 0, 5px, 5px, $color-warm-light, null);
+  }
+
+  &.connected {
+    border: 1px solid #ffffff;
+    background-color: $color-pos-mid;
+    &:hover,
+    &.glow {
+      @include single-box-shadow(0, 0, 5px, 5px, $color-pos-light, null);
+    }
+  }
+}
+
+.form-icon {
+  .workflow-icon-connection {
+    left: inherit;
+    right: 15px;
+    margin-top: -$connection-size/2;
+
+  }
+}
