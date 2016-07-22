@@ -15,7 +15,6 @@
       };
       var setHelp = function(text) {
         $("#help").html(text);
-        console.log(text);
         $("#help").css("display", "inline-block");
       };
 
@@ -27,10 +26,14 @@
           $workflow.find(".middle").droppable({
             accept: ".form",
             drop: dropForm,
+            activeClass: 'ui-droppable-active',
+            hoverClass: 'ui-droppable-hover',
           });
           $workflow.find(".start").droppable({
             accept: ".form",
             drop: dropForm,
+            activeClass: 'ui-droppable-active',
+            hoverClass: 'ui-droppable-hover',
           });
           $("#workspace").append($workflow);
         });
