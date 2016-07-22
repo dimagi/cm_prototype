@@ -1,7 +1,7 @@
       var templates = {
         form: "<div class='form'><div class='connection-controls'><h2 class='noselect'>Form</h2><a class='remove'><i class='fa fa-remove'></i></a></div><input class='name form-control form-control-sm' /><hr /><ol></ol><button class='add-question btn btn-primary btn-sm'>Add question</button></div>",
         question: "<li><textarea rows='2' class='form-control form-control-sm question' ></textarea><a class='remove'><i class='fa fa-remove'></i></a></li>",
-        workflow: "<div class='workflow'><div class='connection-controls'><h2 class='noselect'>Workflow</h2><a class='remove'><i class='fa fa-remove'></i></a></div><div class='start'><span class='title'>Start Form</span><a href='#' class='toolbar-icon toolbar-icon-form'></a></div><div class='middle'><span class='title'>Other Forms</span><a href='#' class='toolbar-icon toolbar-icon-form'></a></div></div>",
+        workflow: "<div class='workflow'><div class='connection-controls'><h2 class='noselect'>Linked Forms</h2><a class='remove'><i class='fa fa-remove'></i></a></div><div class='start'><span class='title'>\"Add\" Form</span><a href='#' class='toolbar-icon toolbar-icon-form'></a></div><div class='middle'><span class='title'>\"Update\" Forms</span><a href='#' class='toolbar-icon toolbar-icon-form'></a></div></div>",
       };
       var dropForm = function(event, ui) {
         var $form = $(ui.draggable);
@@ -79,21 +79,31 @@
 
         // Handle help
         $(".toolbar-icon-form").hover(function() {
-            setHelp("<img src='public/image/form_hover_text.png' style='width: 300px;' />");
+            setHelp("<img src='public/image/form_hover_img.png' style='width: 400px;' />");
         }, function() {
             clearHelp();
         });
         $(".toolbar-icon-workflow").hover(function() {
-            setHelp("<img src='public/image/workflow_hover_img.png' style='width: 600px;' />");
+            setHelp("<img src='public/image/link_hover_img.png' style='width: 700px;' />");
         }, function() {
             clearHelp();
         });
+
         $(document).on('mouseover', '.workflow .start', function() {
             if (!$(this).find(".form").length) {
-                setHelp("[start help]");
+                setHelp("<img src='public/image/add_hover_img.png' style='width: 250px;' />");
             }
         });
         $(document).on('mouseout', '.workflow .start', function() {
+            clearHelp();
+        });
+
+        $(document).on('mouseover', '.workflow .middle', function() {
+            if (!$(this).find(".form").length) {
+                setHelp("<img src='public/image/update_hover_img.png' style='width: 335px;' />");
+            }
+        });
+        $(document).on('mouseout', '.workflow .middle', function() {
             clearHelp();
         });
 
