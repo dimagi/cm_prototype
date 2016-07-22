@@ -45,7 +45,7 @@
               $start = $icon.closest(".start"),
               $middle = $icon.closest(".middle");
           $form.find("input").val("Form " + ($(".form").length + 1));
-          $form.draggable({ revert: true });
+          $form.draggable({ revert: 'invalid', helper: 'clone', opacity: 0.7 });
           if ($start.length) {
             $start.append($form);
           } else if ($middle.length) {
