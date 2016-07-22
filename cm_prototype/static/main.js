@@ -28,12 +28,14 @@
             drop: dropForm,
             activeClass: 'ui-droppable-active',
             hoverClass: 'ui-droppable-hover',
+            tolerance: 'touch',
           });
           $workflow.find(".start").droppable({
             accept: ".form",
             drop: dropForm,
             activeClass: 'ui-droppable-active',
             hoverClass: 'ui-droppable-hover',
+            tolerance: 'touch',
           });
           $("#workspace").append($workflow);
         });
